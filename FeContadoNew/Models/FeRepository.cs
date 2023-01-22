@@ -115,7 +115,7 @@ namespace FeContadoNew.Models
                             {
                                 while (readerDet.Read())
                                 {
-                                    //itemResponse.idCausacion = (Int64)readerDet["idCausacion"];
+                                    itemResponse.estado = reader["estado"].ToString(); 
                                     //itemResponse.tipoOrdenCXP = readerDet["tipoOrdenCXP"].ToString();
                                     //itemResponse.numeroOrdenCXP = readerDet["numeroOrdenCXP"].ToString();
                                 }
