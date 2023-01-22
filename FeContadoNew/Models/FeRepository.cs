@@ -44,10 +44,10 @@ namespace FeContadoNew.Models
 
             try
             {
-                using (SqlConnection connection = new SqlConnection(connectionNova))
+                using (SqlConnection connection = new SqlConnection(connectionSt))
                 {
                     connection.Open();
-                    var readerasync = mapperSP.ExecuteProcedure("usr_sp_itq_insert_CabFEContado", ExecuteType.ExecuteReader, connection, collection).ConfigureAwait(false);
+                    var readerasync = mapperSP.ExecuteProcedure("sp_WS_CU_FEContado", ExecuteType.ExecuteReader, connection, collection).ConfigureAwait(false);
 
                     SqlDataReader reader = (SqlDataReader)readerasync.GetAwaiter().GetResult();
 
